@@ -17,8 +17,8 @@ const Home = () => {
             pauseOnHover
         />
         <Grid container justifyContent={'center'} alignItems={'center'} sx={{minHeight: '100vh'}}>
-            <Grid item xs={10}><SearchCity/></Grid>
-            <Grid item xs={7} md={6}><ResultWeather/></Grid>
+            <Grid item xs={11} md={9}><SearchCity/></Grid>
+            <Grid item xs={10} sm={7} md={4}><ResultWeather/></Grid>
         </Grid>
     </Container>)
 }

@@ -11,7 +11,7 @@ const SearchCity = () => {
     // get css style
     const classes = useStyle()
     // get state from context
-    const {cityName, setCityName} = useContext(PublicContext)
+    const {cityName, setCityName, setLoader, setError} = useContext(PublicContext)
     const dispatch = useDispatch()
     // handelSubmitForm
     const handelSubmitForm = (e) => {
@@ -20,6 +20,7 @@ const SearchCity = () => {
         if (cityName) {
             setCityName(cityName)
             dispatch(getCurrentWeatherCondition(cityName))
+            setLoader(true)
             setCityName(null)
         } else {
             toast.error("please insert name of city", {
@@ -31,6 +32,7 @@ const SearchCity = () => {
                 draggable: true,
                 progress: undefined,
             });
+            setError(false)
         }
     }
     return (<Box component={'form'} className={classes.searchCityForm} onSubmit={(event) => handelSubmitForm(event)}>

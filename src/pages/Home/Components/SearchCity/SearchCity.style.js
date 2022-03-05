@@ -19,7 +19,8 @@ export const useStyle = makeStyles({
             height:'100%',
             padding:'0 1rem',
             color:'#fff',
-            fontSize:'0.87rem'
+            fontSize:'0.87rem',
+            letterSpacing:'0.5px'
         },
         "& button":{
             backgroundColor:'transparent',
@@ -28,7 +29,7 @@ export const useStyle = makeStyles({
             padding:'0 1rem',
             cursor:'pointer',
             color:'#fff',
-            fontSize:'0.93rem'
+            fontSize:'1rem'
         }
     }
 })
